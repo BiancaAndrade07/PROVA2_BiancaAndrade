@@ -3,7 +3,7 @@ session_start();
 require 'conexao.php';
 
 // Verifica se o usuário tem permissão
-if (!isset($_SESSION['perfil']) || ($_SESSION['perfil'] != 1 && $_SESSION['perfil'] != 2)) {
+if (!isset($_SESSION['perfil']) || ($_SESSION['perfil'] != 1 && $_SESSION['perfil'] != 3)) {
     echo "<script>alert('Acesso negado!'); window.location.href='principal.php';</script>";
     exit();
 }

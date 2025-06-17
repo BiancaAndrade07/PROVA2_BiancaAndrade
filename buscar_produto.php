@@ -2,12 +2,6 @@
 session_start();
 require_once 'conexao.php';
 
-//VERIFICA SE USUARIO TEM PERMISSÃO DE ADM OU SECRETARIA
-if (!isset($_SESSION['perfil']) || ($_SESSION['perfil'] != 1 && $_SESSION['perfil'] != 2)) {
-    echo "<script>alert('Acesso negado!'); window.location.href='principal.php';</script>";
-    exit();
-}
-
 $produtos = []; //INICIALIZA A VARIAVEL PARA EVITAR ERROS
 
 //SE O FORMULÁRIO FOR ENVIADO, BUSCA O USUÁRIO PELO ID OU NOME
